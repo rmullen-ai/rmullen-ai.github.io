@@ -143,7 +143,7 @@ function renderHome(){
   app.innerHTML = `
     <h1>Pressure tests</h1>
     <p class="lede">Pressure tests help us identify areas for improvement in our AI apps. Choose a category to see the protocol.</p>
-    <p>Document your pressure test in Section 3 of the Practice Page in your workbook.</p>
+    <p>Document your pressure test in Section 3 of your workbook.</p>
     <p class="note">Right now there is one test per category. We’ll add more as our team designs them and as you come up with new ways to test.</p>
     <div class="cats">
       ${CATEGORIES.map(c => `
@@ -226,7 +226,7 @@ function openTest(c, i, trigger){
       ${tableHTML(t.table)}
 
       <h2 class="sec">Reflect and revise</h2>
-      <p class="sec-note">Answer these questions in Section 3 of the Practice Page in your workbook.</p>
+      <p class="sec-note">Answer these questions in Section 3 of your workbook.</p>
       <div class="questions">${WORKBOOK_QS.map(q => `<p>${q}</p>`).join("")}</div>
       <p class="revise">Then make one targeted revision to your app and run the exact same test again to see whether the improvement holds.</p>
 

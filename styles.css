@@ -77,6 +77,8 @@ h2.sec{font-family:var(--serif); font-weight:500; font-size:28px; margin:44px 0 
 .steps li.general{counter-increment:none}
 .steps li.general::before{content:"✓"}
 .steps li b{font-weight:600}
+.general-test{--accent:var(--c-site)}
+.protocol-purpose .purpose{margin:0}
 .tablewrap{overflow-x:auto; background:var(--surface); border:1px solid var(--line); border-radius:4px}
 table{border-collapse:collapse; width:100%; min-width:600px; font-size:16px}
 th,td{text-align:left; vertical-align:top; padding:12px 14px; border-bottom:1px solid var(--line)}
