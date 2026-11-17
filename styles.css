@@ -78,7 +78,6 @@ h2.sec{font-family:var(--serif); font-weight:500; font-size:28px; margin:44px 0 
 .steps li.general::before{content:"✓"}
 .steps li b{font-weight:600}
 .general-test{--accent:var(--c-site)}
-.protocol-purpose .purpose{margin:0}
 .tablewrap{overflow-x:auto; background:var(--surface); border:1px solid var(--line); border-radius:4px}
 table{border-collapse:collapse; width:100%; min-width:600px; font-size:16px}
 th,td{text-align:left; vertical-align:top; padding:12px 14px; border-bottom:1px solid var(--line)}
@@ -107,7 +106,7 @@ footer{margin-top:56px; font-size:14px; color:var(--muted)}
 a:focus-visible,[tabindex="0"]:focus-visible{outline:3px solid var(--c-site);outline-offset:3px}
 .coach-date{margin:0 0 12px;font-size:15px;color:var(--muted);font-weight:600}
 .coach-sections{display:grid;gap:24px;margin-top:34px}
-.coach-card{background:var(--surface);border:1px solid var(--line);border-top:4px solid var(--c-site);border-radius:4px;padding:22px 24px}
+.coach-card,.protocol-card{background:var(--surface);border:1px solid var(--line);border-top:4px solid var(--c-site);border-radius:4px;padding:22px 24px}
 .coach-card h2{font:500 28px var(--serif);margin:0 0 16px}
 .coach-card ol{padding-left:24px;margin:0}
 .coach-card ul{padding-left:20px;margin:0}
@@ -116,7 +115,7 @@ a:focus-visible,[tabindex="0"]:focus-visible{outline:3px solid var(--c-site);out
 .coach-card ol li+li{border-top:1px solid var(--line);padding-top:14px}
 .coach-card li p{margin:3px 0;color:var(--muted)}
 .coach-card a{color:var(--c-site);font-weight:600;text-underline-offset:3px}
-@media(max-width:450px){.wrap,.sheet{padding-left:16px;padding-right:16px}.site-nav .inner{padding-left:16px;padding-right:16px}.coach-card{padding-left:17px;padding-right:17px}}
+@media(max-width:450px){.wrap,.sheet{padding-left:16px;padding-right:16px}.site-nav .inner{padding-left:16px;padding-right:16px}.coach-card,.protocol-card{padding-left:17px;padding-right:17px}}
 
 .participant-apps{display:grid;justify-items:start;gap:6px;margin:14px 0 4px}
 .participant-apps label{font-weight:600}
