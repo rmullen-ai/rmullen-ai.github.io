@@ -1,41 +1,42 @@
-const cycleMenu = document.querySelector(".cycle-menu");
-const cycleToggle = cycleMenu.querySelector("summary");
-const cycleOptions = cycleMenu.querySelector(".cycle-options");
-let cyclePinned = false;
+document.querySelectorAll(".nav-menu").forEach(menu => {
+  const toggle = menu.querySelector("summary");
+  const options = menu.querySelector(".nav-options");
+  let pinned = false;
 
-function closeCycleMenu() {
-  cyclePinned = false;
-  cycleMenu.open = false;
-}
-
-cycleMenu.addEventListener("pointerenter", event => {
-  if (event.pointerType === "mouse") cycleMenu.open = true;
-});
-
-cycleMenu.addEventListener("pointerleave", event => {
-  if (event.pointerType === "mouse" && !cyclePinned && !cycleOptions.contains(document.activeElement)) {
-    closeCycleMenu();
+  function closeMenu() {
+    pinned = false;
+    menu.open = false;
   }
-});
 
-cycleToggle.addEventListener("click", event => {
-  event.preventDefault();
-  cyclePinned = !cyclePinned;
-  cycleMenu.open = cyclePinned;
-});
+  menu.addEventListener("pointerenter", event => {
+    if (event.pointerType === "mouse") menu.open = true;
+  });
 
-cycleMenu.addEventListener("focusout", event => {
-  if (!cycleMenu.contains(event.relatedTarget)) closeCycleMenu();
-});
+  menu.addEventListener("pointerleave", event => {
+    if (event.pointerType === "mouse" && !pinned && !options.contains(document.activeElement)) {
+      closeMenu();
+    }
+  });
 
-cycleMenu.addEventListener("keydown", event => {
-  if (event.key === "Escape" && cycleMenu.open) {
+  toggle.addEventListener("click", event => {
     event.preventDefault();
-    closeCycleMenu();
-    cycleToggle.focus();
-  }
-});
+    pinned = !pinned;
+    menu.open = pinned;
+  });
 
-document.addEventListener("pointerdown", event => {
-  if (!cycleMenu.contains(event.target)) closeCycleMenu();
+  menu.addEventListener("focusout", event => {
+    if (!menu.contains(event.relatedTarget)) closeMenu();
+  });
+
+  menu.addEventListener("keydown", event => {
+    if (event.key === "Escape" && menu.open) {
+      event.preventDefault();
+      closeMenu();
+      toggle.focus();
+    }
+  });
+
+  document.addEventListener("pointerdown", event => {
+    if (!menu.contains(event.target)) closeMenu();
+  });
 });

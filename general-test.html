@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>General Test · Math + AI Design Studio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+<nav class="site-nav" id="site-nav" aria-label="Studio navigation">
+  <div class="inner">
+    <span class="brand">
+      <img src="/ed-center-ai-logo.jpg" alt="Bank Street Education Center AI Learning Lab" width="512" height="266">
+    </span>
+    <ul>
+      <li>
+        <details class="nav-menu">
+          <summary>Cycle</summary>
+          <ul class="nav-options">
+            <li><a href="/">November Cycle</a></li>
+            <li><a href="/december-cycle.html">December Cycle</a></li>
+          </ul>
+        </details>
+      </li>
+      <li>
+        <details class="nav-menu test-menu">
+          <summary>Test</summary>
+          <ul class="nav-options">
+            <li><a href="/general-test.html" aria-current="page">General Test</a></li>
+            <li><a href="/pressure-tests.html">Pressure Tests</a></li>
+          </ul>
+        </details>
+      </li>
+    </ul>
+  </div>
+</nav>
+<main class="wrap">
+  <h1>General Test</h1>
+  <p class="lede">A general test gives you a snapshot of how your app responds to a realistic task at a specific point in its development. Use it as a checkpoint, even if your app is still a rough draft.</p>
+  <div class="coach-sections">
+    <section class="coach-card" aria-labelledby="baseline">
+      <h2 id="baseline">Baseline Test</h2>
+      <ol>
+        <li>Choose a realistic task your AI app is designed to support. Create a fictional student response, classroom scenario, or teacher request. Do not use real student information.</li>
+        <li>Open your app and complete the task using your original scenario. Save your app’s response as your baseline.</li>
+      </ol>
+    </section>
+    <section class="coach-card" aria-labelledby="workbook">
+      <h2 id="workbook">Workbook</h2>
+      <p>Open the Practice Page in your workbook and answer the questions in Sections 1 and 2.</p>
+      <div class="participant-apps" data-workbook-lookup>
+        <label for="own-workbook">Find your workbook</label>
+        <select id="own-workbook" disabled>
+          <option value="">Select your name</option>
+        </select>
+        <p class="participant-status" role="status"></p>
+        <div class="participant-result" aria-live="polite">
+          <a data-workbook-link target="_blank" rel="noopener noreferrer" hidden></a>
+        </div>
+        <noscript><p>Enable JavaScript to look up a workbook by name.</p></noscript>
+      </div>
+    </section>
+    <section class="coach-card" aria-labelledby="interaction">
+      <h2 id="interaction">Section 1: App Interaction &amp; Output</h2>
+      <ol>
+        <li>What was your initial input to the App?</li>
+        <li>What did the App give you?</li>
+        <li>How did you know when the interaction was “complete”?</li>
+        <li>Is this result what you were hoping for? Why or why not?</li>
+        <li>How challenging was it to use the App?</li>
+        <li>What made it challenging to use?</li>
+      </ol>
+    </section>
+    <section class="coach-card" aria-labelledby="reflection">
+      <h2 id="reflection">Section 2: Reflection</h2>
+      <p>Reflect on the output and consider its classroom implications.</p>
+      <ol start="7">
+        <li>How does the output inform your instruction?</li>
+        <li>What worked well? Where are the opportunities?</li>
+        <li>Where might there be risks? What is the App assuming?</li>
+        <li>What did it leave out that would have made this more pedagogically aligned?</li>
+        <li>Where did the output surprise you?</li>
+        <li>Where did the result disappoint you?</li>
+        <li>How did this App impact your math instruction?</li>
+        <li>What will you do with this output?</li>
+      </ol>
+    </section>
+  </div>
+</main>
+<script src="./participant-workbooks.js" defer></script>
+<script src="/cycle-menu.js" defer></script>
+</body>
+</html>
