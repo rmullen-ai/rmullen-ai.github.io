@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>November Cycle · Math + AI Design Studio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+<nav class="site-nav" id="site-nav" aria-label="Studio navigation">
+  <div class="inner">
+    <span class="brand">
+      <img src="/ed-center-ai-logo.jpg" alt="Bank Street Education Center AI Learning Lab" width="512" height="266">
+    </span>
+    <ul>
+      <li>
+        <details class="cycle-menu">
+          <summary>Cycle</summary>
+          <ul class="cycle-options">
+            <li><a href="/" aria-current="page">November Cycle</a></li>
+            <li><a href="/december-cycle.html">December Cycle</a></li>
+          </ul>
+        </details>
+      </li>
+      <li><a href="/pressure-tests.html">Pressure tests</a></li>
+    </ul>
+  </div>
+</nav>
+<main class="wrap">
+  <p class="coach-date">November Cycle</p>
+  <h1>Coaching Session</h1>
+  <p class="lede">Reconnect as a learning community, reflect on your app and a Critical Friend’s app, and run a pressure test to guide your next revision.</p>
+  <div class="coach-sections">
+    <section class="coach-card" aria-labelledby="agreements">
+      <h2 id="agreements">Community agreements</h2>
+      <ul>
+        <li>Stay engaged and curious.</li>
+        <li>Stories stay, learning leaves.</li>
+        <li>Be mindful of airtime and promote equity of voice.</li>
+        <li>Recognize power dynamics. Be aware of your own power and privilege and how to use it.</li>
+        <li>Acknowledge intent, prioritize impact, and keep the conversation going.</li>
+        <li>Treat disagreement as a positive opportunity for learning.</li>
+        <li>Be respectful and mindful of our own and others’ strengths and growing edges.</li>
+      </ul>
+    </section>
+    <section class="coach-card" aria-labelledby="agenda">
+      <h2 id="agenda">Session agenda and resources</h2>
+      <ol>
+        <li>
+          <strong>Welcome &amp; Introduction</strong>
+          <p>Check in with one another and share how you’re feeling today.</p>
+          <a href="/community-builder.jpg" target="_blank" rel="noopener">Which Blob are you feeling like? ↗</a>
+        </li>
+        <li>
+          <strong>Use a General Test to Observe and Reflect</strong><p>Test your app and practice answering reflective questions through a general test</p>
+          <div class="participant-apps" data-workbook-lookup>
+            <label for="own-workbook">Find your workbook</label>
+            <select id="own-workbook" disabled>
+              <option value="">Select your name</option>
+            </select>
+            <p class="participant-status" role="status"></p>
+            <div class="participant-result" aria-live="polite">
+              <a data-workbook-link target="_blank" rel="noopener noreferrer" hidden></a>
+            </div>
+            <noscript><p>Enable JavaScript to look up a workbook by name.</p></noscript>
+          </div>
+        </li>
+        <li>
+          <strong>Engage in Critical Friendship</strong>
+          <p>Review a Critical Friend’s app and practice answering reflective feedback questions together</p>
+          <div class="participant-apps" data-workbook-lookup>
+            <label for="critical-friend-workbook">Find your Critical Friend’s workbook</label>
+            <select id="critical-friend-workbook" disabled>
+              <option value="">Select your Critical Friend’s name</option>
+            </select>
+            <p class="participant-status" role="status"></p>
+            <div class="participant-result" aria-live="polite">
+              <a data-workbook-link target="_blank" rel="noopener noreferrer" hidden></a>
+            </div>
+            <noscript><p>Enable JavaScript to look up a workbook by name.</p></noscript>
+          </div>
+        </li>
+        <li><strong>Run a Pressure Test</strong><p>Use the results of your pressure test to explore how to improve your app.</p><a href="/pressure-tests.html">Browse pressure tests</a></li>
+        <li><strong>Wrap Up &amp; Close</strong><p>Share reflections from today’s test<br>Schedule and preview for coaching cycle 3</p></li>
+      </ol>
+    </section>
+  </div>
+  <footer>Math + AI Design Studio, Bank Street Education Center</footer>
+</main>
+<script src="./participant-workbooks.js" defer></script>
+<script src="/cycle-menu.js" defer></script>
+</body>
+</html>
