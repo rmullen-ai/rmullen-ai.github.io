@@ -1,6 +1,6 @@
 // Paste the web app URL from your Google Apps Script deployment between the quotes.
 // While it is empty, the forms run in practice mode: answers save on this device but are not sent.
-const RESPONSES_URL = "";
+const RESPONSES_URL = "https://script.google.com/macros/s/AKfycbzPMEtWwWtCAVeideyim9rbDoj1SD6ypq1aXEmexz6ZIMSzOgnByHGO7tMfQk3SVWXM/exec";
 
 (() => {
   const PREFIX = "mads-responses:";
