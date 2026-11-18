@@ -148,9 +148,9 @@ a:focus-visible,[tabindex="0"]:focus-visible{outline:3px solid var(--c-site);out
 .studio-home h2{font-size:28px;font-weight:500;margin:0 0 12px}
 .home-links{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,290px),1fr));gap:16px}
 .home-links a{display:block;height:100%;color:var(--ink);text-decoration:none}
-.home-links a:hover{border-color:var(--c-site)}
+.home-links a:hover{border-color:var(--section)}
 .home-links a:hover h3{text-decoration:underline;text-underline-offset:4px}
-.home-links h3{color:var(--c-site);font-size:21px;line-height:1.3;font-weight:600;margin:0 0 8px}
+.home-links h3{color:color-mix(in srgb, var(--section) 60%, var(--ink));font-size:21px;line-height:1.3;font-weight:600;margin:0 0 8px}
 .home-links p{color:var(--muted);margin:0}
 
 .critical-friends{--accent:var(--c-site)}
@@ -173,3 +173,13 @@ a:focus-visible,[tabindex="0"]:focus-visible{outline:3px solid var(--c-site);out
 .response-card{background:var(--surface);border:1px solid var(--line);border-left:6px solid var(--accent);border-radius:4px;padding:22px 24px}
 @media(max-width:450px){.response-card{padding-left:17px;padding-right:17px}}
 .resource-links{grid-template-columns:repeat(auto-fill,minmax(min(100%,290px),1fr))}
+
+/* Homepage sections use the Bank Street College palette (Visual Style Guide, page 7) */
+:root{--bs-dark-blue:#216A95; --bs-light-blue:#099ECC; --bs-orange:#E16740}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){--bs-dark-blue:#85ADC5} }
+:root[data-theme="dark"]{--bs-dark-blue:#85ADC5}
+.studio-home section{--section:var(--c-site)}
+.studio-home .section-cycles{--section:var(--bs-dark-blue)}
+.studio-home .section-tests{--section:var(--bs-light-blue)}
+.studio-home .section-resources{--section:var(--bs-orange)}
+.home-links .coach-card{border-top-color:var(--section)}
