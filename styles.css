@@ -91,9 +91,6 @@ td.ex{font-style:italic; font-size:17px}
 .questions p{margin:12px 0; font-size:19px}
 .revise{font-size:17px; margin:18px 0 0; max-width:62ch}
 .actions{display:flex; flex-wrap:wrap; gap:12px; margin-top:36px}
-.workbook{font:600 16px var(--sans); padding:14px 22px; border-radius:4px; background:var(--accent); color:var(--onaccent); text-decoration:none; border:1px solid var(--accent)}
-.workbook:hover{filter:brightness(1.08)}
-.workbook:focus-visible{outline:3px solid var(--accent); outline-offset:3px}
 .results{ font:600 16px var(--sans); padding:14px 22px; border-radius:4px; border:1px dashed var(--line); background:var(--chip); color:var(--muted); cursor:not-allowed}
 .results span{font-weight:400}
 footer{margin-top:56px; font-size:14px; color:var(--muted)}
@@ -119,14 +116,7 @@ a:focus-visible,[tabindex="0"]:focus-visible{outline:3px solid var(--c-site);out
 .coach-card a{color:var(--c-site);font-weight:600;text-underline-offset:3px}
 @media(max-width:450px){.wrap,.sheet{padding-left:16px;padding-right:16px}.site-nav .inner{padding-left:16px;padding-right:16px}.coach-card,.protocol-card{padding-left:17px;padding-right:17px}}
 
-.participant-apps{display:grid;justify-items:start;gap:6px;margin:14px 0 4px}
-.participant-apps label{font-weight:600}
-.participant-apps select{width:min(100%, 24rem);min-height:44px;padding:7px 10px;border:1px solid var(--muted);border-radius:4px;background:var(--surface);color:var(--ink);font:inherit}
-.participant-apps select:focus-visible{outline:3px solid var(--c-site);outline-offset:3px}
-.participant-apps .participant-status{margin:0}
-.participant-apps .participant-status:empty{display:none}
 
-.participant-result:not([hidden]){display:flex;flex-wrap:wrap;gap:6px 18px}
 
 .nav-menu{position:relative}
 .nav-menu summary{display:flex;align-items:center;gap:8px;padding:4px 0;color:var(--muted);font-size:15px;font-weight:600;list-style:none;cursor:pointer}
