@@ -31,6 +31,7 @@
           <ul class="nav-options">
             <li><a href="/general-test.html">General Test</a></li>
             <li><a href="/pressure-tests.html" aria-current="page">Pressure Tests</a></li>
+            <li><a href="/critical-friends.html">Critical Friends</a></li>
           </ul>
         </details>
       </li>
@@ -42,10 +43,10 @@
 <script>
 const GENERAL_STEP = "<b>Start from your general test.</b> Use the task, the fictional input, and the app’s response from the general test you’ve already run. Do not use real student information.";
 
-const WORKBOOK_QS = [
+const SECTION_3_QS = [
   "What did you learn from this pressure test?",
   "What did the pressure test reveal about the quality of math instruction this app would support or uphold?",
-  "One change I will try next is…"
+  "One change you will try next is…"
 ];
 
 const CATEGORIES = [
@@ -143,7 +144,7 @@ function renderHome(){
   app.innerHTML = `
     <h1>Pressure tests</h1>
     <p class="lede">Pressure tests help us identify areas for improvement in our AI apps. Choose a category to see the protocol.</p>
-    <p class="lede">Document your pressure test in Section 3 in your workbook.</p>
+    <p class="lede">Record your responses at the end of each protocol.</p>
     <p class="note">Right now there is one test per category. We’ll add more as our team designs them and as you come up with new ways to test.</p>
     <div class="cats">
       ${CATEGORIES.map(c => `
@@ -226,8 +227,31 @@ function openTest(c, i, trigger){
       ${tableHTML(t.table)}
 
       <h2 class="sec">Reflect and revise</h2>
-      <p class="sec-note">Document your pressure test in Section 3 in your workbook.</p>
-      <div class="questions">${WORKBOOK_QS.map(q => `<p>${q}</p>`).join("")}</div>
+      <p class="sec-note">Answer these after you run the test. Your answers save on this device as you type.</p>
+      <div class="response-card">
+        <form class="response-form" data-response-form="pressure-test:${c.id}-${i}" data-sheet="pressure-test">
+          <div class="field">
+            <label for="pt-name">Your name</label>
+            <select id="pt-name" name="participant" data-roster required>
+              <option value="">Select your name</option>
+            </select>
+          </div>
+          <div class="field">
+            <span class="field-label">What pressure test did you run?</span>
+            <p class="auto-value">${c.name}: ${t.title}</p>
+            <input type="hidden" name="test" data-label="What pressure test did you run?" value="${c.name}: ${t.title}">
+          </div>
+          ${SECTION_3_QS.map((q,n) => `
+          <div class="field">
+            <label for="pt-q${n+1}">${q}</label>
+            <textarea id="pt-q${n+1}" name="pt-q${n+1}"></textarea>
+          </div>`).join("")}
+          <div class="form-actions">
+            <button type="submit" class="submit">Submit responses</button>
+            <p class="save-status" role="status"></p>
+          </div>
+        </form>
+      </div>
       <p class="revise">Then make one targeted revision to your app and run the exact same test again to see whether the improvement holds.</p>
 
       <div class="actions">
@@ -252,10 +276,13 @@ function openTest(c, i, trigger){
   document.addEventListener("keydown", onKey);
   el.querySelector(".close").addEventListener("click", close);
   el.querySelector(".close").focus();
+  window.madsInitResponseForm?.(el.querySelector("form"));
 }
 
 renderHome();
 </script>
+<script src="./participant-workbooks.js" defer></script>
+<script src="/responses.js" defer></script>
 <script src="/cycle-menu.js" defer></script>
 </body>
 </html>

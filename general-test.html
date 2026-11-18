@@ -31,6 +31,7 @@
           <ul class="nav-options">
             <li><a href="/general-test.html" aria-current="page">General Test</a></li>
             <li><a href="/pressure-tests.html">Pressure Tests</a></li>
+            <li><a href="/critical-friends.html">Critical Friends</a></li>
           </ul>
         </details>
       </li>
@@ -48,9 +49,83 @@
     </ol>
   </section>
   <div class="coach-sections">
+    <section class="coach-card" aria-labelledby="responses">
+      <h2 id="responses">Your responses</h2>
+      <form class="response-form" data-response-form="general-test" data-sheet="general-test">
+        <p class="form-intro">Answer these after you run your test. Your answers save on this device as you type, so you can come back to them before you submit.</p>
+        <div class="field">
+          <label for="gt-name">Your name</label>
+          <select id="gt-name" name="participant" data-roster required>
+            <option value="">Select your name</option>
+          </select>
+        </div>
+        <fieldset>
+          <legend>Section 1: Observation</legend>
+          <div class="field">
+            <label for="obs-1">What was your initial input to the app?</label>
+            <textarea id="obs-1" name="obs-1"></textarea>
+          </div>
+          <div class="field">
+            <label for="obs-2">What did the app give you?</label>
+            <textarea id="obs-2" name="obs-2"></textarea>
+          </div>
+          <div class="field">
+            <label for="obs-3">How did you know when the interaction was “complete”?</label>
+            <textarea id="obs-3" name="obs-3"></textarea>
+          </div>
+          <div class="field">
+            <label for="obs-4">Is this the result you were hoping for? Why or why not?</label>
+            <textarea id="obs-4" name="obs-4"></textarea>
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>Section 2: Reflection</legend>
+          <div class="field">
+            <label for="ref-1">Reflect on the output: How does the output inform your instruction?</label>
+            <textarea id="ref-1" name="ref-1"></textarea>
+          </div>
+          <div class="field">
+            <label for="ref-2">Where are the opportunities? What worked well?</label>
+            <textarea id="ref-2" name="ref-2"></textarea>
+          </div>
+          <div class="field">
+            <label for="ref-3">Where might there be risks? What is the app assuming?</label>
+            <textarea id="ref-3" name="ref-3"></textarea>
+          </div>
+          <div class="field">
+            <label for="ref-4">What did it leave out that would have made this more pedagogically aligned?</label>
+            <textarea id="ref-4" name="ref-4"></textarea>
+          </div>
+          <div class="field">
+            <label for="ref-5">Where did the output surprise you?</label>
+            <textarea id="ref-5" name="ref-5"></textarea>
+          </div>
+          <div class="field">
+            <label for="ref-6">How did this app impact your math instruction?</label>
+            <textarea id="ref-6" name="ref-6"></textarea>
+          </div>
+          <div class="field">
+            <label for="ref-7">How challenging was it to use the app?</label>
+            <textarea id="ref-7" name="ref-7"></textarea>
+          </div>
+          <div class="field">
+            <label for="ref-8">What made it challenging to use? Where did the result disappoint you?</label>
+            <textarea id="ref-8" name="ref-8"></textarea>
+          </div>
+          <div class="field">
+            <label for="ref-9">What will you do with this output?</label>
+            <textarea id="ref-9" name="ref-9"></textarea>
+          </div>
+        </fieldset>
+        <div class="form-actions">
+          <button type="submit" class="submit">Submit responses</button>
+          <p class="save-status" role="status"></p>
+        </div>
+      </form>
+    </section>
     <section class="coach-card" aria-labelledby="workbook">
       <h2 id="workbook">Workbook</h2>
-      <p>Document your general test in Sections 1 and 2 of your workbook.</p>
+      <p>Prefer your workbook? Sections 1 and 2 have the same questions.</p>
       <div class="participant-apps" data-workbook-lookup>
         <label for="own-workbook">Find your workbook</label>
         <select id="own-workbook" disabled>
@@ -66,6 +141,7 @@
   </div>
 </main>
 <script src="./participant-workbooks.js" defer></script>
+<script src="/responses.js" defer></script>
 <script src="/cycle-menu.js" defer></script>
 </body>
 </html>

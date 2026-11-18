@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Critical Friends · Math + AI Design Studio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+<nav class="site-nav" id="site-nav" aria-label="Studio navigation">
+  <div class="inner">
+    <a class="brand" href="/home.html" aria-label="Math + AI Design Studio homepage">
+      <img src="/ed-center-ai-logo.jpg" alt="Bank Street Education Center AI Learning Lab" width="512" height="266">
+    </a>
+    <ul>
+      <li>
+        <details class="nav-menu">
+          <summary>Cycle</summary>
+          <ul class="nav-options">
+            <li><a href="/">November Cycle</a></li>
+            <li><a href="/december-cycle.html">December Cycle</a></li>
+          </ul>
+        </details>
+      </li>
+      <li>
+        <details class="nav-menu test-menu">
+          <summary>Test</summary>
+          <ul class="nav-options">
+            <li><a href="/general-test.html">General Test</a></li>
+            <li><a href="/pressure-tests.html">Pressure Tests</a></li>
+            <li><a href="/critical-friends.html" aria-current="page">Critical Friends</a></li>
+          </ul>
+        </details>
+      </li>
+    </ul>
+  </div>
+</nav>
+<main class="sheet critical-friends">
+  <h1>Critical Friends</h1>
+  <section class="protocol-card" aria-labelledby="steps">
+    <p class="purpose">Swap apps with a colleague and try theirs the way a teacher would. Your feedback helps your Critical Friend see what their app does well and what to revise next.</p>
+    <h2 id="steps" class="sec">Steps</h2>
+    <ol class="steps">
+      <li>Pair up with your Critical Friend and swap apps. Select your name and theirs in the form below.</li>
+      <li>Ask your Critical Friend what problem their app is designed to solve and what kind of task to try.</li>
+      <li>Run their app on a realistic task using a fictional student response, classroom scenario, or teacher request. Do not use real student information.</li>
+      <li>Explore the outputs. Notice where the app upholds high-quality math teaching and learning, including the NCTM practices, and where it could improve.</li>
+      <li>Share what stood out and any ideas for improvement in the form below.</li>
+    </ol>
+  </section>
+  <div class="coach-sections">
+    <section class="coach-card" aria-labelledby="feedback">
+      <h2 id="feedback">Section 4: Critical Friendship Feedback</h2>
+      <form class="response-form" data-response-form="critical-friends" data-sheet="critical-friends">
+        <p class="form-intro">As a Critical Friend, explore the app, then use the space below to share what stood out and any ideas for improvement. Your answers save on this device as you type.</p>
+        <div class="field">
+          <label for="cf-name">Your name</label>
+          <select id="cf-name" name="participant" data-roster required>
+            <option value="">Select your name</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="cf-friend">Whose app are you testing?</label>
+          <select id="cf-friend" name="friend" data-roster required>
+            <option value="">Select your Critical Friend’s name</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="cf-1">How did the app help solve the problem your Critical Friend was trying to solve?</label>
+          <textarea id="cf-1" name="cf-1"></textarea>
+        </div>
+        <div class="field">
+          <label for="cf-2">Where did you see high-quality math teaching and learning, especially the NCTM practices, upheld during your use of the app and in its outputs?</label>
+          <textarea id="cf-2" name="cf-2"></textarea>
+        </div>
+        <div class="form-actions">
+          <button type="submit" class="submit">Submit feedback</button>
+          <p class="save-status" role="status"></p>
+        </div>
+      </form>
+    </section>
+  </div>
+</main>
+<script src="./participant-workbooks.js" defer></script>
+<script src="/responses.js" defer></script>
+<script src="/cycle-menu.js" defer></script>
+</body>
+</html>

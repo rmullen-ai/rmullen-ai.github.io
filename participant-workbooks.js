@@ -75,12 +75,18 @@ function setupWorkbookLookup(lookup, participants) {
   });
 }
 
+window.madsRoster = fetch("./participant-workbooks.csv")
+  .then(response => {
+    if (!response.ok) throw new Error("Workbook roster unavailable");
+    return response.text();
+  })
+  .then(readParticipants);
+window.madsRoster.catch(() => {});
+
 async function populateWorkbookLookups() {
   const lookups = document.querySelectorAll("[data-workbook-lookup]");
   try {
-    const response = await fetch("./participant-workbooks.csv");
-    if (!response.ok) throw new Error("Workbook roster unavailable");
-    const participants = readParticipants(await response.text());
+    const participants = await window.madsRoster;
     lookups.forEach(lookup => setupWorkbookLookup(lookup, participants));
   } catch {
     lookups.forEach(lookup => {
